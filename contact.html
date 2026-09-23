@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us & Apply for Preview - ROUTE Platform</title>
+    <meta name="description" content="Contact the ROUTE ministry team or submit your preview access request for church bus routing and soulwinning management.">
+    
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Ambient Background Glows -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-bottom-right"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="brand-logo">
+                <img src="images/logos/Logo Horizontal White.svg" alt="ROUTE Logo" height="38">
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="features.html">Features</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="badge badge-preview">
+                    <span class="badge-dot"></span>
+                    Preview Access
+                </div>
+                <a href="https://app.routeapp.org" class="btn btn-primary" data-open-modal="preview">
+                    Apply for Preview
+                    <svg class="btn-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+
+            <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="features.html">Features</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+        <a href="https://app.routeapp.org" class="btn btn-primary" data-open-modal="preview">Apply for Preview Access</a>
+    </div>
+
+    <!-- Header Section -->
+    <section class="section" style="padding-top: 10rem; padding-bottom: 3rem;">
+        <div class="container text-center">
+            <div class="badge badge-preview reveal" style="margin-bottom: 1rem;">Get In Touch</div>
+            <h1 class="gradient-text reveal" style="font-size: 3.5rem; max-width: 800px; margin: 0 auto 1.5rem auto;">
+                Connect With The ROUTE Ministry Team
+            </h1>
+            <p class="reveal" style="font-size: 1.2rem; max-width: 650px; margin: 0 auto 2.5rem auto;">
+                Have questions about preview access, features, onboarding, or custom phone numbers? We are here to help your bus ministry thrive.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info Layout -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr; gap: 3rem;" class="reveal">
+                <div style="display: grid; grid-template-columns: 1fr; gap: 3rem;">
+                    @media (min-width: 850px) { style="grid-template-columns: 1fr 1fr;" }
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr; gap: 3rem;" class="reveal">
+                <div class="card" style="padding: 3rem;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Submit Inquiry or Preview Request</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 2rem;">
+                        Fill out the form below and our team will review your submission promptly.
+                    </p>
+
+                    <form id="contact-main-form">
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label" for="contact-church">Church Name</label>
+                                <input type="text" id="contact-church" class="form-input" placeholder="First Baptist Church" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-name">Contact Person</label>
+                                <input type="text" id="contact-name" class="form-input" placeholder="Pastor / Bus Captain Name" required>
+                            </div>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label" for="contact-email">Email Address</label>
+                                <input type="email" id="contact-email" class="form-input" placeholder="contact@church.org" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-phone">Phone Number</label>
+                                <input type="tel" id="contact-phone" class="form-input" placeholder="(555) 000-0000">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-buses">Active Bus / Van Fleet Size</label>
+                            <select id="contact-buses" class="form-select">
+                                <option value="1-2">1 - 2 Vehicles</option>
+                                <option value="3-5">3 - 5 Vehicles</option>
+                                <option value="6-10">6 - 10 Vehicles</option>
+                                <option value="10+">10+ Vehicles</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contact-message">Ministry Requirements / Message</label>
+                            <textarea id="contact-message" class="form-textarea" placeholder="Tell us about your bus ministry, soulwinning goals, or questions..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">
+                            Send Message & Request Access
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Info Cards Sidebar -->
+                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div class="card" style="background: linear-gradient(135deg, rgba(123, 175, 212, 0.08) 0%, rgba(19, 41, 75, 0.4) 100%); border-color: rgba(123, 175, 212, 0.3);">
+                        <div class="card-icon" style="margin-bottom: 1rem;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                        </div>
+                        <h3>Preview Access Guidelines</h3>
+                        <p style="font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem;">
+                            ROUTE is currently in selective preview. While anyone can submit an application at <strong>app.routeapp.org</strong>, requests are approved based on onboarding capacity. Nationwide public release launches in <strong>January 2028</strong>.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon" style="margin-bottom: 1rem;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <h3>Direct Contact & Support</h3>
+                        <p style="font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem;">
+                            Already a preview partner church? Log in directly at <strong>app.routeapp.org</strong> to access your workspace console, submit support tickets, or chat with technical support.
+                        </p>
+                        <a href="https://app.routeapp.org" class="btn btn-secondary" style="margin-top: 1rem;" target="_blank">Access App Portal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo">
+                        <img src="images/logos/Logo Horizontal White.svg" alt="ROUTE Logo" height="34">
+                    </a>
+                    <p>The high-performance operating system for church bus ministries, soulwinning visitation, and route tracking.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://app.routeapp.org" target="_blank">App Portal (app.routeapp.org)</a></li>
+                        <li><a href="https://app.routeapp.org" data-open-modal="preview">Preview Access Request</a></li>
+                        <li><a href="pricing.html">Plans & Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal & Trust</h4>
+                    <ul class="footer-links">
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><span style="color:#64748b; font-size:0.85rem;">Public Launch: Jan 2028</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 ROUTE. Built for local church bus ministries. All rights reserved.</div>
+                <div>Applications evaluated selectively for Preview Access.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Preview Modal -->
+    <div class="modal-overlay" id="preview-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div style="text-align:center; margin-bottom: 1.5rem;">
+                <div class="badge badge-preview" style="margin-bottom:0.75rem;">Preview Access Request</div>
+                <h3 style="font-size:1.8rem; margin-bottom:0.5rem;">Join The ROUTE Preview</h3>
+                <p style="font-size:0.9rem;">
+                    ROUTE is currently in selective preview. Requests are evaluated manually prior to our public launch in <strong>January 2028</strong>.
+                </p>
+            </div>
+
+            <form id="preview-access-form">
+                <div class="form-group">
+                    <label class="form-label" for="modal-church">Church Name</label>
+                    <input type="text" id="modal-church" class="form-input" placeholder="e.g. Grace Baptist Church" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="modal-name">Contact Person</label>
+                    <input type="text" id="modal-name" class="form-input" placeholder="Pastor or Bus Director Name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="modal-email">Email Address</label>
+                    <input type="email" id="modal-email" class="form-input" placeholder="pastor@church.org" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="modal-buses">Number of Bus / Van Routes</label>
+                    <select id="modal-buses" class="form-select">
+                        <option value="1-2">1 - 2 Routes</option>
+                        <option value="3-5">3 - 5 Routes</option>
+                        <option value="6-10">6 - 10 Routes</option>
+                        <option value="10+">10+ Routes</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%; margin-top:1rem;">
+                    Submit Application
+                </button>
+            </form>
+
+            <div id="form-success-message" style="display:none; text-align:center; padding:2rem 0;">
+                <svg class="btn-icon" style="width:48px; height:48px; color:#34d399; margin-bottom:1rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                <h4 style="font-size:1.4rem; margin-bottom:0.5rem; color:#fff;">Application Received</h4>
+                <p style="font-size:0.9rem; margin-bottom:1.5rem;">
+                    Thank you! Your preview access request has been submitted for review. You can also log in directly or check status at <strong>app.routeapp.org</strong>.
+                </p>
+                <a href="https://app.routeapp.org" class="btn btn-secondary" target="_blank">Visit app.routeapp.org</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript Engine -->
+    <script src="js/main.js"></script>
+</body>
+</html>

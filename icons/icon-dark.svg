@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="500" cy="500" fx="500" fy="500" r="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#231f20"/>
+      <stop offset="1" stop-color="#231f20"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient" x1="174.98" y1="233.78" x2="822.87" y2="881.67" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7bafd4"/>
+      <stop offset="1" stop-color="#13294b"/>
+    </linearGradient>
+  </defs>
+  <rect class="cls-1" y="0" width="1000" height="1000"/>
+  <path class="cls-2" d="M282.1,177.88h392.14c49.62,0,96.27,19.32,131.35,54.41,35.08,35.08,54.41,81.73,54.41,131.35s-19.32,96.26-54.41,131.35c-35.09,35.09-81.73,54.41-131.35,54.41-6.03,0-12.75-.29-16.34-.7-1.1-.13-3.75-.56-5.91-.93L282.1,177.88h0ZM261.21,252.12l183.48,183.48-183.48,183.48V252.12h0ZM496.21,487.12l88.64,88.64-246.36,246.36h-177.27l335-335h0ZM632.42,623.32l198.8,198.8h-177.27l-110.16-110.16,88.64-88.64h0ZM245.89,162.88l398.88,398.88c.63.07,8.54,1.51,11.41,1.84,4.49.52,11.98.8,18.06.8,110.88,0,200.76-89.89,200.76-200.76s-89.88-200.76-200.76-200.76c-6.08,0-428.35,0-428.35,0h0ZM246.21,215.91v439.4l219.7-219.7-219.7-219.7h0ZM496.21,465.91L125,837.12h219.7l261.36-261.36-109.85-109.85h0ZM632.42,602.11l-109.85,109.85,125.16,125.16h219.7l-235.01-235.01h0Z"/>
+</svg>
