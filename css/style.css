@@ -1280,16 +1280,22 @@ p {
 }
 
 /* Mobile Nav Overlay Drawer */
+.mobile-drawer {
+    display: none;
+}
+
 @media (max-width: 899px) {
     .mobile-toggle {
         display: block;
     }
 
-    .nav-links, .nav-actions {
+    .nav-content > .nav-links, 
+    .nav-content > .nav-actions {
         display: none;
     }
 
     .mobile-drawer {
+        display: flex;
         position: fixed;
         top: 0;
         right: 0;
@@ -1300,7 +1306,6 @@ p {
         border-left: 1px solid var(--color-border);
         padding: 6rem 2rem 2rem 2rem;
         z-index: 999;
-        display: flex;
         flex-direction: column;
         gap: 2rem;
         transform: translateX(100%);
@@ -1323,3 +1328,4 @@ p {
         font-size: 1.15rem;
     }
 }
+
