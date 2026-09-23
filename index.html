@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROUTE - Church Bus Ministry & Soulwinning Management Platform</title>
-    <meta name="description" content="The modern operating system for church bus ministries, routes, stops, attendance tracking, soulwinning visitation, and team communications.">
+    <title>ROUTE - Bring Order, Safety, and Joy Back to Your Church Bus Ministry</title>
+    <meta name="description" content="ROUTE takes the chaos out of Sunday morning bus runs and Saturday soulwinning. Keep bus captains organized, keep parents informed, and follow up with every visitor.">
     
     <!-- Favicon & Icons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -28,15 +28,15 @@
     <!-- Navigation Bar -->
     <header class="navbar">
         <div class="container nav-content">
-            <a href="index.html" class="brand-logo">
+            <a href="./" class="brand-logo">
                 <img src="images/logos/Logo Horizontal White.svg" alt="ROUTE Logo" height="38">
             </a>
 
             <nav class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="features.html">Features</a>
-                <a href="pricing.html">Pricing</a>
-                <a href="contact.html">Contact</a>
+                <a href="./" class="active">Home</a>
+                <a href="features/">Features</a>
+                <a href="pricing/">Pricing</a>
+                <a href="contact/">Contact</a>
             </nav>
 
             <div class="nav-actions">
@@ -59,12 +59,12 @@
     <!-- Mobile Drawer -->
     <div class="mobile-drawer">
         <nav class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="features.html">Features</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="contact.html">Contact</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="privacy.html">Privacy Policy</a>
+            <a href="./" class="active">Home</a>
+            <a href="features/">Features</a>
+            <a href="pricing/">Pricing</a>
+            <a href="contact/">Contact</a>
+            <a href="terms/">Terms of Service</a>
+            <a href="privacy/">Privacy Policy</a>
         </nav>
         <a href="https://app.routeapp.org" class="btn btn-primary" data-open-modal="preview">Apply for Preview Access</a>
     </div>
@@ -75,14 +75,14 @@
             <div class="hero-badge-wrapper reveal">
                 <div class="badge badge-preview">
                     <span class="badge-dot"></span>
-                    Selective Preview Access Available
+                    Church Ministry Partner Preview
                 </div>
             </div>
 
-            <h1 class="gradient-text reveal">The Modern Operating System for Church Bus & Outreach Ministries</h1>
+            <h1 class="gradient-text reveal">Bring Order, Safety, and Joy Back to Your Church Bus Ministry</h1>
 
             <p class="reveal">
-                Streamline bus routes, track rider attendance, coordinate soulwinning visitation, and power church team communication with speed, precision, and simplicity.
+                ROUTE takes the chaos out of Sunday morning bus runs and Saturday soulwinning. Help your bus captains stay organized, keep parents informed in real time, and ensure no child or family is ever forgotten.
             </p>
 
             <div class="hero-cta reveal">
@@ -90,8 +90,8 @@
                     Request Preview Access
                     <svg class="btn-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
-                <a href="features.html" class="btn btn-secondary btn-lg">
-                    Explore Platform Features
+                <a href="features/" class="btn btn-secondary btn-lg">
+                    See How It Helps Your Ministry
                 </a>
             </div>
 
@@ -100,312 +100,264 @@
                 <div class="preview-banner-text">
                     <svg class="btn-icon" style="color: #7bafd4; width:24px; height:24px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
                     <p>
-                        <strong>ROUTE is currently in Preview.</strong> Requests to join are evaluated selectively. Official public launch scheduled for <strong>January 2028</strong>.
+                        <strong>ROUTE is in Selective Preview.</strong> We evaluate requests to give early partner churches personal onboarding attention. Official nationwide launch set for <strong>January 2028</strong>.
                     </p>
                 </div>
                 <a href="https://app.routeapp.org" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" target="_blank">
-                    Submit Request at app.routeapp.org
+                    Apply at app.routeapp.org
                 </a>
             </div>
 
-            <!-- Interactive Live Dashboard Mockup -->
-            <div class="mockup-container reveal">
-                <div class="mockup-frame">
-                    <div class="mockup-header">
-                        <div class="mockup-dots">
-                            <span class="mockup-dot"></span>
-                            <span class="mockup-dot"></span>
-                            <span class="mockup-dot"></span>
-                        </div>
-                        <div class="mockup-title">ROUTE Console - Live Ministry Operations</div>
-                        <div style="font-size: 0.75rem; color: #7bafd4; font-weight: 700;">Local Church Fleet</div>
+            <!-- Live Interactive Bus Route Simulator -->
+            <div class="simulator-card reveal">
+                <div class="simulator-header">
+                    <div class="simulator-title">
+                        <svg class="btn-icon" style="color: #7bafd4;" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7c0 .6.4 1 1 1h2"/></svg>
+                        Simulate Sunday Morning Bus Run
+                    </div>
+                    <button class="btn btn-secondary" id="sim-check-rider-btn" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
+                        Click to Advance Step
+                    </button>
+                </div>
+
+                <div class="simulator-steps">
+                    <div class="simulator-step-box active" id="sim-step-1">
+                        <div class="step-number">Step 1</div>
+                        <div class="step-heading">Driver Starts Route</div>
+                        <div class="step-desc">Driver opens app on tablet. Route stop order is auto-optimized for fastest travel time.</div>
                     </div>
 
-                    <div class="mockup-body">
-                        <!-- Sidebar Mock -->
-                        <div class="mockup-sidebar">
-                            <div class="mockup-nav-item active">
-                                <svg class="btn-icon" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-                                Dashboard
-                            </div>
-                            <div class="mockup-nav-item">
-                                <svg class="btn-icon" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7c0 .6.4 1 1 1h2"/></svg>
-                                Bus Routes
-                            </div>
-                            <div class="mockup-nav-item">
-                                <svg class="btn-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                                Soulwinning Checks
-                            </div>
-                            <div class="mockup-nav-item">
-                                <svg class="btn-icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                RoutePhone System
-                            </div>
-                            <div class="mockup-nav-item">
-                                <svg class="btn-icon" viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/></svg>
-                                District Mapping
-                            </div>
-                        </div>
+                    <div class="simulator-step-box" id="sim-step-2">
+                        <div class="step-number">Step 2</div>
+                        <div class="step-heading">1-Tap Rider Check-In</div>
+                        <div class="step-desc">Captain taps rider photo at stop #2. Automated text alerts parents: "Bus is 10 mins away!"</div>
+                    </div>
 
-                        <!-- Main Content Mock -->
-                        <div class="mockup-main">
-                            <div class="mockup-stats-grid">
-                                <div class="stat-card">
-                                    <div class="stat-card-title">Riders Checked-In</div>
-                                    <div class="stat-card-value">148</div>
-                                    <div class="stat-card-sub">+18 vs last Sunday</div>
-                                </div>
-                                <div class="stat-card">
-                                    <div class="stat-card-title">Active Routes</div>
-                                    <div class="stat-card-value">6 Fleets</div>
-                                    <div class="stat-card-sub">All buses in route</div>
-                                </div>
-                                <div class="stat-card">
-                                    <div class="stat-card-title">Visits Logged</div>
-                                    <div class="stat-card-value">62 Contacts</div>
-                                    <div class="stat-card-sub">Soulwinning team</div>
-                                </div>
-                            </div>
+                    <div class="simulator-step-box" id="sim-step-3">
+                        <div class="step-number">Step 3</div>
+                        <div class="step-heading">Safe Arrival at Church</div>
+                        <div class="step-desc">Total riders counted. Secretary views complete attendance roster right in the church office.</div>
+                    </div>
+                </div>
 
-                            <div class="mockup-route-list">
-                                <div style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.75rem; color: #ffffff;">Live Route Operations</div>
-                                
-                                <div class="route-item">
-                                    <div class="route-info">
-                                        <div class="route-icon-box">
-                                            <svg class="btn-icon" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7c0 .6.4 1 1 1h2"/></svg>
-                                        </div>
-                                        <div>
-                                            <div class="route-name">Route 1 - Downtown Express</div>
-                                            <div class="route-details">Captain Johnson &bull; 34 Riders Checked-In &bull; Stop 6 of 8</div>
-                                        </div>
-                                    </div>
-                                    <span class="status-pill">On Schedule</span>
-                                </div>
+                <div class="simulator-action-bar">
+                    <div class="simulator-status">
+                        <span class="badge-dot" style="background:#34d399; box-shadow:0 0 8px #34d399;"></span>
+                        <span id="sim-status-text">Bus Route Active &bull; Driver En Route to Stop 1</span>
+                    </div>
 
-                                <div class="route-item">
-                                    <div class="route-info">
-                                        <div class="route-icon-box">
-                                            <svg class="btn-icon" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7c0 .6.4 1 1 1h2"/></svg>
-                                        </div>
-                                        <div>
-                                            <div class="route-name">Route 3 - Westside Neighborhoods</div>
-                                            <div class="route-details">Captain Miller &bull; 41 Riders Checked-In &bull; Stop 4 of 9</div>
-                                        </div>
-                                    </div>
-                                    <span class="status-pill">On Schedule</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div id="sim-sms-alert" style="display:none; background:#13294b; border:1px solid rgba(123,175,212,0.3); padding:0.5rem 1rem; border-radius:8px; font-size:0.8rem; color:#bae6fd;">
+                        <strong>Parent SMS Alert Sent:</strong> "Captain Johnson is 10 minutes from your stop!"
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core Pillars Grid -->
+    <!-- How ROUTE Helps Your Ministry Section -->
     <section class="section">
         <div class="container">
             <div class="section-header reveal">
-                <div class="badge badge-preview" style="margin-bottom: 0.75rem;">Built For Church Ministry</div>
-                <h2>Everything Your Bus & Visitation Teams Need</h2>
-                <p>Designed specifically for local church bus captains, drivers, soulwinning workers, and ministry leaders.</p>
+                <div class="badge badge-preview" style="margin-bottom: 0.75rem;">Ministry Impact</div>
+                <h2>Real Solutions for Real Church Challenges</h2>
+                <p>We built ROUTE to solve the daily frustrations bus directors, captains, drivers, and pastors face every week.</p>
             </div>
 
             <div class="feature-grid reveal-stagger">
                 <div class="card">
                     <div class="card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7c0 .6.4 1 1 1h2"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                     </div>
-                    <h3>Bus & Van Route Operations</h3>
-                    <p>Easily manage route stop sequences, live rider pick-up/drop-off check-ins, driver assignments, and vehicle maintenance logs in real time.</p>
+                    <h3>No More Lost Paper Lists</h3>
+                    <p>Stop relying on soggy, handwritten clipboard notes. Every bus captain, driver, and assistant has their full route roster right on their mobile device or tablet.</p>
                 </div>
 
                 <div class="card">
                     <div class="card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                     </div>
-                    <h3>Soulwinning & Visitation</h3>
-                    <p>Track prospective families, log door-to-door visit notes, assign territory maps to soulwinning teams, and manage spiritual decision records.</p>
+                    <h3>Get Home Faster Every Sunday</h3>
+                    <p>Automated stop ordering eliminates unnecessary driving loops, saving fuel and getting your bus workers home on time for Sunday lunch with their families.</p>
                 </div>
 
                 <div class="card">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     </div>
-                    <h3>RoutePhone Communications</h3>
-                    <p>Dedicated church ministry phone system with automated SMS alerts to parents ("Bus arriving in 10 mins!"), team chat room, and call logging.</p>
+                    <h3>Peace of Mind for Parents</h3>
+                    <p>Automatic text messages let parents know exact pickup times so children are dressed, ready, and waiting at the curb when the bus pulls up.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Follow Up on Every Soulwinning Visitor</h3>
+                    <p>Keep track of every door visited during Saturday soulwinning, log prayer requests, and ensure prospective families receive a warm follow-up visit before Sunday.</p>
                 </div>
 
                 <div class="card">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
                     </div>
-                    <h3>District & Territory Mapping</h3>
-                    <p>Visual map assignments showing prospect locations, bus route boundaries, rider density heatmaps, and optimal route ordering.</p>
+                    <h3>Clear Territory Maps for Workers</h3>
+                    <p>Visual map boundaries ensure soulwinning teams and bus captains know exactly which neighborhoods and streets belong to their route.</p>
                 </div>
 
                 <div class="card">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
-                    <h3>Enterprise Security & RLS Isolation</h3>
-                    <p>Every church tenant's data is strictly isolated with Row-Level Security policies. Complete protection for rider and family privacy.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    </div>
-                    <h3>Seamless Data Import</h3>
-                    <p>Effortlessly migrate existing bus records, rider rosters, and prospect lists from spreadsheets or legacy files in seconds.</p>
+                    <h3>100% Private Church Data</h3>
+                    <p>Your church's family rosters and child attendance records belong strictly to your church. Your data is isolated, protected, and never shared.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Interactive Feature Showcase Tabs -->
-    <section class="section" style="background: rgba(123, 175, 212, 0.03);">
+    <section class="section" style="background: rgba(123, 175, 212, 0.02);">
         <div class="container">
             <div class="section-header reveal">
-                <h2>Designed for Fast Mobile & Desktop Operation</h2>
-                <p>Whether bus captains are on tablets in the field or secretaries are in the church office, ROUTE responds instantly.</p>
+                <h2>Designed for Workers in the Field</h2>
+                <p>Easy enough for any bus worker to use on a smartphone, powerful enough for church secretaries and pastors in the office.</p>
             </div>
 
             <div class="tabs-container reveal">
                 <div class="tabs-nav">
-                    <button class="tab-btn active" data-tab="bus">Bus Operations</button>
-                    <button class="tab-btn" data-tab="visitation">Soulwinning</button>
-                    <button class="tab-btn" data-tab="phone">RoutePhone</button>
-                    <button class="tab-btn" data-tab="security">Data Privacy</button>
+                    <button class="tab-btn active" data-tab="bus">Sunday Bus Runs</button>
+                    <button class="tab-btn" data-tab="visitation">Saturday Outreach</button>
+                    <button class="tab-btn" data-tab="phone">Parent Texting</button>
+                    <button class="tab-btn" data-tab="security">Church Privacy</button>
                 </div>
 
                 <div class="tab-content active" id="tab-bus">
                     <div class="tab-text">
-                        <h3 class="gradient-text-sky">Real-Time Route Management</h3>
-                        <p>Keep your bus captains organized with one-tap rider check-ins, instant stop re-ordering, and driver navigation modes.</p>
+                        <h3 class="gradient-text-sky">Fast, Stress-Free Bus Operations</h3>
+                        <p>Bus captains can check in riders with a single tap, view medical or allergy notes, and keep drivers on the fastest route path.</p>
                         <ul class="tab-list">
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Rapid attendance tracking per bus stop
+                                1-tap rider attendance with family photo profiles
                             </li>
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Automated notification alerts to parents
+                                Auto-generated driver stop order for fastest navigation
                             </li>
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Driver and helper team assignments
+                                Clear team roles for captains, drivers, and helpers
                             </li>
                         </ul>
                     </div>
                     <div class="card" style="background: #060b13; border-color: rgba(123,175,212,0.25);">
-                        <div style="font-weight:700; font-size:1.1rem; margin-bottom:1rem; color:#fff;">Live Bus Stop Monitor</div>
+                        <div style="font-weight:700; font-size:1.1rem; margin-bottom:1rem; color:#fff;">Sunday Route Summary</div>
                         <div style="padding:0.75rem; background:#0c1626; border-radius:8px; margin-bottom:0.75rem; font-size:0.9rem;">
-                            <span style="color:#7bafd4; font-weight:700;">Stop #3: Oak Street & 4th</span> &bull; 8 Riders Waiting
+                            <span style="color:#7bafd4; font-weight:700;">Route 1 Downtown:</span> 34 Riders Checked-In &bull; On Time
                         </div>
                         <div style="padding:0.75rem; background:#0c1626; border-radius:8px; margin-bottom:0.75rem; font-size:0.9rem;">
-                            <span style="color:#7bafd4; font-weight:700;">Stop #4: Elm Park Apartments</span> &bull; 12 Riders Waiting
+                            <span style="color:#7bafd4; font-weight:700;">Route 3 Westside:</span> 41 Riders Checked-In &bull; On Time
                         </div>
                     </div>
                 </div>
 
                 <div class="tab-content" id="tab-visitation">
                     <div class="tab-text">
-                        <h3 class="gradient-text-sky">Soulwinning & Prospect Tracking</h3>
-                        <p>Empower your visitation teams to follow up with visitors, log spiritual interest, and map out neighborhoods.</p>
+                        <h3 class="gradient-text-sky">Organized Soulwinning & Visitation</h3>
+                        <p>Give your outreach teams clear neighborhood maps and prayer note tracking so every prospective family feels cared for.</p>
                         <ul class="tab-list">
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Door-to-door visit logging & notes
+                                Door-to-door visit logging and prayer request notes
                             </li>
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Soulwinning check-in counter & records
+                                Soulwinning check-in counter and team outreach totals
                             </li>
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Follow-up scheduling for bus captains
+                                Automatic follow-up reminders before Sunday morning
                             </li>
                         </ul>
                     </div>
                     <div class="card" style="background: #060b13; border-color: rgba(123,175,212,0.25);">
-                        <div style="font-weight:700; font-size:1.1rem; margin-bottom:1rem; color:#fff;">Soulwinning Log Entry</div>
+                        <div style="font-weight:700; font-size:1.1rem; margin-bottom:1rem; color:#fff;">Saturday Outreach Record</div>
                         <div style="font-size:0.9rem; color:#94a3b8; line-height:1.6;">
-                            "Visited Smith Family at 1422 Pine Ave. Requested bus pick-up for 2 children this Sunday morning."
+                            "Visited Miller Family at 408 Maple St. Requested bus pickup for 3 kids. Saved to Route 2 roster."
                         </div>
                     </div>
                 </div>
 
                 <div class="tab-content" id="tab-phone">
                     <div class="tab-text">
-                        <h3 class="gradient-text-sky">RoutePhone Telephony Integration</h3>
-                        <p>A unified church phone number for text messaging, voice calls, internal worker team chats, and automated notifications.</p>
+                        <h3 class="gradient-text-sky">RoutePhone Parent Communication</h3>
+                        <p>Automated text notifications update parents when the bus is approaching, reducing frantic phone calls to bus captains.</p>
                         <ul class="tab-list">
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Direct SMS communication with parents
+                                Automated "Bus is 10 mins away!" parent SMS updates
                             </li>
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Team chat rooms for bus captains & drivers
+                                Dedicated church ministry phone number for text & voice
                             </li>
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Incoming call routing and call history
+                                Internal team chat room for bus captains & leadership
                             </li>
                         </ul>
                     </div>
                     <div class="card" style="background: #060b13; border-color: rgba(123,175,212,0.25);">
-                        <div style="font-weight:700; font-size:1.1rem; margin-bottom:1rem; color:#fff;">RoutePhone SMS Notice</div>
+                        <div style="font-weight:700; font-size:1.1rem; margin-bottom:1rem; color:#fff;">Parent Text Notification</div>
                         <div style="background:#13294b; color:#fff; padding:0.85rem; border-radius:12px; font-size:0.85rem;">
-                            "Route 2 Bus Notice: Captain Miller is 10 minutes away from your stop!"
+                            "Grace Baptist Bus Notice: Captain Miller is 10 minutes away from your stop!"
                         </div>
                     </div>
                 </div>
 
                 <div class="tab-content" id="tab-security">
                     <div class="tab-text">
-                        <h3 class="gradient-text-sky">PostgreSQL RLS & Tenant Isolation</h3>
-                        <p>Complete data boundary protection ensuring that every church tenant's ministry data is isolated, encrypted, and secure.</p>
+                        <h3 class="gradient-text-sky">Complete Church Family Privacy</h3>
+                        <p>Your church's data is strictly isolated. No other church or outside party can ever view your rosters or family contact details.</p>
                         <ul class="tab-list">
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Row-Level Security (RLS) policies
+                                Strict tenant boundary protection for every church
                             </li>
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Strict role-based permissions
+                                Worker permissions tailored for captains, drivers, & secretaries
                             </li>
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Zero cross-tenant data leaks guaranteed
+                                100% church data ownership guarantee
                             </li>
                         </ul>
                     </div>
                     <div class="card" style="background: #060b13; border-color: rgba(123,175,212,0.25);">
-                        <div style="font-weight:700; font-size:1.1rem; margin-bottom:0.5rem; color:#fff;">Security Status</div>
-                        <div style="color:#34d399; font-weight:700; font-size:0.9rem;">RLS Active &bull; Tenant Isolated</div>
+                        <div style="font-weight:700; font-size:1.1rem; margin-bottom:0.5rem; color:#fff;">Church Data Guarantee</div>
+                        <div style="color:#34d399; font-weight:700; font-size:0.9rem;">Private &bull; Encrypted &bull; Tenant Isolated</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Preview Call to Action Banner -->
+    <!-- Preview Application CTA Section -->
     <section class="section">
         <div class="container">
             <div class="card reveal" style="text-align:center; padding: 4rem 2rem; background: linear-gradient(135deg, #0c1626 0%, #13294b 100%); border-color: #7bafd4;">
                 <div class="badge badge-preview" style="margin-bottom: 1.5rem;">Join The Preview Program</div>
                 <h2 style="font-size: 2.8rem; margin-bottom: 1.25rem;">Ready to Transform Your Church Bus Ministry?</h2>
                 <p style="max-width: 650px; margin: 0 auto 2rem auto; font-size: 1.1rem;">
-                    Submit your request at <strong>app.routeapp.org</strong> to be considered for our preview release. Official public launch scheduled for <strong>January 2028</strong>.
+                    Submit your preview request at <strong>app.routeapp.org</strong> to be considered for early partner access prior to our <strong>January 2028</strong> public launch.
                 </p>
                 <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
                     <a href="https://app.routeapp.org" class="btn btn-primary btn-lg" data-open-modal="preview">
                         Submit Preview Request
                         <svg class="btn-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
-                    <a href="contact.html" class="btn btn-secondary btn-lg">
+                    <a href="contact/" class="btn btn-secondary btn-lg">
                         Contact Ministry Team
                     </a>
                 </div>
@@ -418,7 +370,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="brand-logo">
+                    <a href="./" class="brand-logo">
                         <img src="images/logos/Logo Horizontal White.svg" alt="ROUTE Logo" height="34">
                     </a>
                     <p>
@@ -429,10 +381,10 @@
                 <div class="footer-col">
                     <h4>Navigation</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="./">Home</a></li>
+                        <li><a href="features/">Features</a></li>
+                        <li><a href="pricing/">Pricing</a></li>
+                        <li><a href="contact/">Contact</a></li>
                     </ul>
                 </div>
 
@@ -441,15 +393,15 @@
                     <ul class="footer-links">
                         <li><a href="https://app.routeapp.org" target="_blank">App Portal (app.routeapp.org)</a></li>
                         <li><a href="https://app.routeapp.org" data-open-modal="preview">Preview Access Request</a></li>
-                        <li><a href="pricing.html">Plans & Pricing</a></li>
+                        <li><a href="pricing/">Plans & Pricing</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Legal & Trust</h4>
                     <ul class="footer-links">
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms/">Terms of Service</a></li>
+                        <li><a href="privacy/">Privacy Policy</a></li>
                         <li><span style="color:#64748b; font-size:0.85rem;">Public Launch: Jan 2028</span></li>
                     </ul>
                 </div>
