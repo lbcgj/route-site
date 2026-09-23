@@ -71,7 +71,46 @@
 
     <!-- Hero Section -->
     <section class="hero section">
-        <div class="container">
+        <div class="container hero-container-inner">
+            <!-- Floating Eye-Catcher Glass Badges -->
+            <div class="hero-float-card float-left-card">
+                <div class="float-avatar-group">
+                    <span class="avatar-sm">EM</span>
+                    <span class="avatar-sm" style="background:#0284c7;">SD</span>
+                    <span class="avatar-sm" style="background:#10b981;">LJ</span>
+                </div>
+                <div class="float-text">
+                    <strong>38 Riders Checked In</strong>
+                    <span>Route 1 Downtown Roster</span>
+                </div>
+            </div>
+
+            <div class="hero-float-card float-right-card">
+                <div class="float-icon-box">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="float-text">
+                    <strong>Saturday Soulwinning</strong>
+                    <span>28 Doors Visited Today</span>
+                </div>
+            </div>
+
+            <!-- Hero Live Ticker Bar -->
+            <div class="hero-live-ticker reveal">
+                <div class="ticker-item">
+                    <span class="badge-dot" style="background:#34d399; box-shadow:0 0 8px #34d399;"></span>
+                    Sunday Live Roster Sync
+                </div>
+                <span style="color:var(--color-border);">&bull;</span>
+                <div class="ticker-item">
+                    <strong>Smart Routing</strong> Optimization
+                </div>
+                <span style="color:var(--color-border);">&bull;</span>
+                <div class="ticker-item">
+                    <strong>Saturday Outreach</strong> Tracker
+                </div>
+            </div>
+
             <div class="hero-badge-wrapper reveal">
                 <div class="badge badge-preview">
                     <span class="badge-dot"></span>
@@ -79,10 +118,10 @@
                 </div>
             </div>
 
-            <h1 class="gradient-text reveal">Bring Order, Safety, and Joy Back to Your Church Bus Ministry</h1>
+            <h1 class="gradient-text gradient-text-shimmer reveal">Rider Attendance, Saturday Soulwinning, Bus Routing — Unified</h1>
 
             <p class="reveal">
-                ROUTE takes the chaos out of Sunday morning bus runs and Saturday soulwinning. Help your bus captains stay organized, keep parents informed in real time, and ensure no child or family is ever forgotten.
+                ROUTE unifies every part of your bus ministry into one simple platform. Built by an active bus captain for his church bus route, ROUTE takes the chaos out of Sunday morning runs and Saturday soulwinning.
             </p>
 
             <div class="hero-cta reveal">
@@ -100,7 +139,7 @@
                 <div class="preview-banner-text">
                     <svg class="btn-icon" style="color: #7bafd4; width:24px; height:24px;" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
                     <p>
-                        <strong>ROUTE is in Selective Preview.</strong> We evaluate requests to give early partner churches personal onboarding attention. Official nationwide launch set for <strong>January 2028</strong>.
+                        <strong>Built for local churches.</strong> ROUTE is in Selective Preview while we evaluate early partner churches. Official nationwide release set for <strong>January 2028</strong>.
                     </p>
                 </div>
                 <a href="https://app.routeapp.org" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" target="_blank">
@@ -124,19 +163,19 @@
                     <div class="simulator-step-box active" id="sim-step-1">
                         <div class="step-number">Step 1</div>
                         <div class="step-heading">Driver Starts Route</div>
-                        <div class="step-desc">Driver opens app on tablet. Route stop order is auto-optimized for fastest travel time.</div>
+                        <div class="step-desc">Driver opens app on tablet. Stop order is auto-optimized for fastest travel time.</div>
                     </div>
 
                     <div class="simulator-step-box" id="sim-step-2">
                         <div class="step-number">Step 2</div>
                         <div class="step-heading">1-Tap Rider Check-In</div>
-                        <div class="step-desc">Captain taps rider photo at stop #2. Automated text alerts parents: "Bus is 10 mins away!"</div>
+                        <div class="step-desc">Captain taps rider photo at pickup. Attendance roster syncs in real time for driver & secretary.</div>
                     </div>
 
                     <div class="simulator-step-box" id="sim-step-3">
                         <div class="step-number">Step 3</div>
                         <div class="step-heading">Safe Arrival at Church</div>
-                        <div class="step-desc">Total riders counted. Secretary views complete attendance roster right in the church office.</div>
+                        <div class="step-desc">Total riders verified. Secretary views complete attendance roster right in the church office.</div>
                     </div>
                 </div>
 
@@ -145,9 +184,174 @@
                         <span class="badge-dot" style="background:#34d399; box-shadow:0 0 8px #34d399;"></span>
                         <span id="sim-status-text">Bus Route Active &bull; Driver En Route to Stop 1</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div id="sim-sms-alert" style="display:none; background:#13294b; border:1px solid rgba(123,175,212,0.3); padding:0.5rem 1rem; border-radius:8px; font-size:0.8rem; color:#bae6fd;">
-                        <strong>Parent SMS Alert Sent:</strong> "Captain Johnson is 10 minutes from your stop!"
+    <!-- Interactive Scroll Showcase Section -->
+    <section class="scroll-showcase-section" id="scroll-showcase">
+        <div class="container">
+            <div class="section-header reveal" style="margin-bottom: 3.5rem;">
+                <div class="badge badge-preview" style="margin-bottom: 0.75rem;">Interactive Showcase</div>
+                <h2 style="font-size: 2.8rem;">Rider Attendance, Saturday Soulwinning, Bus Routing — Unified</h2>
+                <p style="font-size: 1.1rem; max-width: 720px; margin: 0 auto;">
+                    Built by an active bus captain to bring order, clarity, and peace of mind to every worker on your team.
+                </p>
+            </div>
+
+            <div class="scroll-showcase-sticky-wrapper">
+                <!-- Left Side: Interactive Step Navigation -->
+                <div class="scroll-showcase-nav">
+                    <div class="scroll-progress-line">
+                        <div class="scroll-progress-fill" id="scroll-progress-bar"></div>
+                    </div>
+
+                    <div class="scroll-step-card active" data-stage="1" id="step-card-1">
+                        <div class="step-badge">Phase 1</div>
+                        <h3>1. Smart Sunday Bus Routing</h3>
+                        <p>Auto-optimized stop ordering eliminates driving loops, saves fuel, and gets workers home on time.</p>
+                    </div>
+
+                    <div class="scroll-step-card" data-stage="2" id="step-card-2">
+                        <div class="step-badge">Phase 2</div>
+                        <h3>2. 1-Tap Rider Attendance</h3>
+                        <p>Captains tap rider photos at pickup. Attendance syncs in real time with the driver and church office.</p>
+                    </div>
+
+                    <div class="scroll-step-card" data-stage="3" id="step-card-3">
+                        <div class="step-badge">Phase 3</div>
+                        <h3>3. Saturday Soulwinning & Outreach</h3>
+                        <p>Clear neighborhood maps, door-to-door visit notes, and prayer request tracking for your visitation teams.</p>
+                    </div>
+                </div>
+
+                <!-- Right Side: Live Mockup Viewport -->
+                <div class="scroll-showcase-viewport">
+                    <div class="mockup-frame">
+                        <div class="mockup-header">
+                            <div class="mockup-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <div class="mockup-title-bar" id="showcase-header-title">ROUTE App &bull; Sunday Route 1 Downtown Navigation</div>
+                        </div>
+
+                        <div class="mockup-body">
+                            <!-- Screen 1: Bus Routing -->
+                            <div class="showcase-screen active" id="screen-stage-1">
+                                <div class="route-hud">
+                                    <div class="hud-stat">
+                                        <span class="hud-label">Active Route</span>
+                                        <span class="hud-val">Route 1 Downtown</span>
+                                    </div>
+                                    <div class="hud-stat">
+                                        <span class="hud-label">Est. Time Saved</span>
+                                        <span class="hud-val" style="color:#34d399;">24 Mins</span>
+                                    </div>
+                                    <div class="hud-stat">
+                                        <span class="hud-label">Total Stops</span>
+                                        <span class="hud-val">12 Stops</span>
+                                    </div>
+                                </div>
+                                <div class="route-visual-map">
+                                    <div class="map-path-line"></div>
+                                    <div class="map-stop-pin active-pin" style="top:50%; left:22%;">
+                                        <span class="pin-num">1</span>
+                                        <span class="pin-label">408 Oak St &bull; Miller</span>
+                                    </div>
+                                    <div class="map-stop-pin" style="top:50%; left:52%;">
+                                        <span class="pin-num">2</span>
+                                        <span class="pin-label">112 5th Ave &bull; Davis</span>
+                                    </div>
+                                    <div class="map-stop-pin" style="top:50%; left:82%;">
+                                        <span class="pin-num">3</span>
+                                        <span class="pin-label">First Baptist Church</span>
+                                    </div>
+                                    <div class="bus-moving-icon" id="bus-anim-icon" style="left:22%;">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v7c0 .6.4 1 1 1h2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Screen 2: 1-Tap Rider Attendance -->
+                            <div class="showcase-screen" id="screen-stage-2">
+                                <div class="attendance-hud">
+                                    <div>
+                                        <div style="font-weight:700; font-size:1.05rem; color:#fff;">Route 1 Rider Roster</div>
+                                        <div style="font-size:0.8rem; color:#7bafd4;">1-Tap Check-In Active</div>
+                                    </div>
+                                    <div class="headcount-badge">
+                                        <span id="showcase-checked-count">38</span> / 42 Checked In
+                                    </div>
+                                </div>
+                                <div class="rider-cards-grid">
+                                    <div class="rider-card checked-in">
+                                        <div style="display:flex; align-items:center;">
+                                            <div class="rider-avatar">EM</div>
+                                            <div class="rider-info">
+                                                <div class="rider-name">Ethan Miller</div>
+                                                <div class="rider-meta">Stop #1 &bull; Peanut Allergy Note</div>
+                                            </div>
+                                        </div>
+                                        <div class="check-badge">Checked In</div>
+                                    </div>
+                                    <div class="rider-card checked-in">
+                                        <div style="display:flex; align-items:center;">
+                                            <div class="rider-avatar" style="background:#1e3a8a;">SD</div>
+                                            <div class="rider-info">
+                                                <div class="rider-name">Sophia Davis</div>
+                                                <div class="rider-meta">Stop #2 &bull; Parent Contact Synced</div>
+                                            </div>
+                                        </div>
+                                        <div class="check-badge">Checked In</div>
+                                    </div>
+                                    <div class="rider-card">
+                                        <div style="display:flex; align-items:center;">
+                                            <div class="rider-avatar" style="background:#854d0e;">LJ</div>
+                                            <div class="rider-info">
+                                                <div class="rider-name">Lucas Johnson</div>
+                                                <div class="rider-meta">Stop #3 &bull; Parent: Mark (555-0192)</div>
+                                            </div>
+                                        </div>
+                                        <button class="tap-check-btn">Tap Check-In</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Screen 3: Saturday Soulwinning -->
+                            <div class="showcase-screen" id="screen-stage-3">
+                                <div class="soulwinning-hud">
+                                    <div>
+                                        <div style="font-weight:700; font-size:1.05rem; color:#fff;">Saturday Outreach Tracker</div>
+                                        <div style="font-size:0.8rem; color:#34d399;">Active Visitation Session</div>
+                                    </div>
+                                    <div class="soulwinning-stat-badge">
+                                        28 Doors Visited &bull; 6 Prospects Added
+                                    </div>
+                                </div>
+                                <div class="outreach-log-cards">
+                                    <div class="outreach-card">
+                                        <div class="outreach-header">
+                                            <span class="prospect-name">Taylor Family</span>
+                                            <span class="prospect-status">Roster Added</span>
+                                        </div>
+                                        <div class="prospect-address">742 Evergreen Terrace</div>
+                                        <div class="prospect-note">"Met Mrs. Taylor. Requested bus pickup for 2 kids this Sunday."</div>
+                                    </div>
+                                    <div class="outreach-card">
+                                        <div class="outreach-header">
+                                            <span class="prospect-name">Wilson Family</span>
+                                            <span class="prospect-status" style="background:rgba(234,179,8,0.2); color:#fde047;">Prayer Request</span>
+                                        </div>
+                                        <div class="prospect-address">819 Pine Street</div>
+                                        <div class="prospect-note">"Prayed for Mr. Wilson's health. Invited family to church."</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -184,8 +388,8 @@
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     </div>
-                    <h3>Peace of Mind for Parents</h3>
-                    <p>Automatic text messages let parents know exact pickup times so children are dressed, ready, and waiting at the curb when the bus pulls up.</p>
+                    <h3>Instant Parent Contact Access</h3>
+                    <p>Bus captains can view parent phone numbers, emergency details, and special care notes at a glance to reach parents directly whenever needed.</p>
                 </div>
 
                 <div class="card">
@@ -215,6 +419,31 @@
         </div>
     </section>
 
+    <!-- Story / Built by an Active Bus Captain Section -->
+    <section class="section" style="background: linear-gradient(180deg, rgba(6, 11, 19, 0) 0%, rgba(19, 41, 75, 0.3) 50%, rgba(6, 11, 19, 0) 100%); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+        <div class="container">
+            <div class="card reveal" style="max-width: 980px; margin: 0 auto; padding: 3.5rem 2.5rem; background: var(--color-surface-navy); border-color: var(--color-border-glow);">
+                <div style="display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 280px;">
+                        <div class="badge badge-preview" style="margin-bottom: 1rem;">Real Ministry Experience</div>
+                        <h2 style="font-size: 2.2rem; margin-bottom: 1.25rem;">Built by an Active Bus Captain, for Local Church Bus Ministries</h2>
+                        <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.25rem; color: #cbd5e1;">
+                            ROUTE wasn’t created by a large corporation, a mega-church IT department, or software developers who have never stepped foot on a Sunday morning bus run.
+                        </p>
+                        <p style="font-size: 0.98rem; line-height: 1.7; color: var(--color-text-body);">
+                            It was built by an active bus captain for his church bus route. He understands what it takes to manage rosters in the rain, keep track of children, coordinate drivers, and visit homes on Saturday. ROUTE unifies <strong>rider attendance, Saturday soulwinning, and bus routing</strong> into one simple tool.
+                        </p>
+                    </div>
+                    <div style="width: 220px; text-align: center; background: rgba(123, 175, 212, 0.06); padding: 2rem 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                        <div style="font-size: 2.8rem; font-weight: 800; color: var(--color-brand-sky); line-height: 1;">100%</div>
+                        <div style="font-size: 0.85rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.5rem; margin-bottom: 0.75rem;">Ministry Focused</div>
+                        <p style="font-size: 0.8rem; color: var(--color-text-body); margin: 0;">Designed specifically for bus captains, drivers, and soulwinning teams.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Interactive Feature Showcase Tabs -->
     <section class="section" style="background: rgba(123, 175, 212, 0.02);">
         <div class="container">
@@ -227,7 +456,7 @@
                 <div class="tabs-nav">
                     <button class="tab-btn active" data-tab="bus">Sunday Bus Runs</button>
                     <button class="tab-btn" data-tab="visitation">Saturday Outreach</button>
-                    <button class="tab-btn" data-tab="phone">Parent Texting</button>
+                    <button class="tab-btn" data-tab="phone">Parent & Team Contact</button>
                     <button class="tab-btn" data-tab="security">Church Privacy</button>
                 </div>
 
@@ -290,16 +519,16 @@
 
                 <div class="tab-content" id="tab-phone">
                     <div class="tab-text">
-                        <h3 class="gradient-text-sky">RoutePhone Parent Communication</h3>
-                        <p>Automated text notifications update parents when the bus is approaching, reducing frantic phone calls to bus captains.</p>
+                        <h3 class="gradient-text-sky">Direct Parent & Team Communication</h3>
+                        <p>Access parent phone numbers, emergency contact details, and worker chat in one unified view.</p>
                         <ul class="tab-list">
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Automated "Bus is 10 mins away!" parent SMS updates
+                                Instant parent phone number & emergency contact lookups
                             </li>
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
-                                Dedicated church ministry phone number for text & voice
+                                Dedicated church line routing directly to bus captains on duty
                             </li>
                             <li class="tab-list-item">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg>
@@ -308,9 +537,9 @@
                         </ul>
                     </div>
                     <div class="card" style="background: #060b13; border-color: rgba(123,175,212,0.25);">
-                        <div style="font-weight:700; font-size:1.1rem; margin-bottom:1rem; color:#fff;">Parent Text Notification</div>
+                        <div style="font-weight:700; font-size:1.1rem; margin-bottom:1rem; color:#fff;">Parent Contact Info</div>
                         <div style="background:#13294b; color:#fff; padding:0.85rem; border-radius:12px; font-size:0.85rem;">
-                            "Grace Baptist Bus Notice: Captain Miller is 10 minutes away from your stop!"
+                            <strong>Stop #2 Parent:</strong> Mark Miller &bull; (555) 0192 &bull; <em>"Pick up at side porch"</em>
                         </div>
                     </div>
                 </div>

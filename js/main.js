@@ -74,16 +74,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Interactive Bus Route Simulator (Home Page)
+    // 5. Interactive Bus Route Simulator (Home Page - Eye Catcher)
     const simStepBoxes = document.querySelectorAll('.simulator-step-box');
     const simRiderCheckBtn = document.getElementById('sim-check-rider-btn');
     const simStatusText = document.getElementById('sim-status-text');
-    const simSmsAlert = document.getElementById('sim-sms-alert');
 
     if (simStepBoxes.length && simRiderCheckBtn) {
         let currentStep = 1;
+        let simAutoTimer = null;
 
-        simRiderCheckBtn.addEventListener('click', () => {
+        const advanceSimStep = () => {
             currentStep = (currentStep % 3) + 1;
 
             simStepBoxes.forEach(box => box.classList.remove('active'));
@@ -94,13 +94,102 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (currentStep === 1) {
                 simStatusText.textContent = 'Bus Route Started • Driver En Route to Stop 1';
-                if (simSmsAlert) simSmsAlert.style.display = 'none';
             } else if (currentStep === 2) {
-                simStatusText.textContent = '3 Riders Checked-In at Stop 2 • Parent Alert Triggered';
-                if (simSmsAlert) simSmsAlert.style.display = 'block';
+                simStatusText.textContent = '3 Riders Checked-In at Stop 2 • Roster Synced with Church Office';
             } else if (currentStep === 3) {
                 simStatusText.textContent = 'All Riders Arrived Safely at Church • Route Complete!';
-                if (simSmsAlert) simSmsAlert.style.display = 'block';
+            }
+        };
+
+        // Manual Click Handler
+        simRiderCheckBtn.addEventListener('click', () => {
+            if (simAutoTimer) clearInterval(simAutoTimer);
+            advanceSimStep();
+        });
+
+        simStepBoxes.forEach((box, idx) => {
+            box.addEventListener('click', () => {
+                if (simAutoTimer) clearInterval(simAutoTimer);
+                currentStep = idx; // will advance to idx + 1
+                advanceSimStep();
+            });
+        });
+
+        // Auto-play loop to catch user eye immediately on page load
+        simAutoTimer = setInterval(advanceSimStep, 4200);
+    }
+
+    // 5b. Front-Page Interactive Scroll Showcase Controller
+    const scrollShowcaseSection = document.getElementById('scroll-showcase');
+    const stepCards = document.querySelectorAll('.scroll-step-card');
+    const showcaseScreens = document.querySelectorAll('.showcase-screen');
+    const progressBarFill = id => document.getElementById(id);
+    const busAnimIcon = document.getElementById('bus-anim-icon');
+    const showcaseHeaderTitle = document.getElementById('showcase-header-title');
+
+    if (scrollShowcaseSection && stepCards.length && showcaseScreens.length) {
+        const setStage = (stageNum) => {
+            stepCards.forEach(card => {
+                if (card.getAttribute('data-stage') == stageNum) {
+                    card.classList.add('active');
+                } else {
+                    card.classList.remove('active');
+                }
+            });
+
+            showcaseScreens.forEach(screen => {
+                if (screen.id === `screen-stage-${stageNum}`) {
+                    screen.classList.add('active');
+                } else {
+                    screen.classList.remove('active');
+                }
+            });
+
+            const fillEl = document.getElementById('scroll-progress-bar');
+            if (fillEl) {
+                fillEl.style.height = `${(stageNum / 3) * 100}%`;
+            }
+
+            if (showcaseHeaderTitle) {
+                if (stageNum == 1) {
+                    showcaseHeaderTitle.textContent = 'ROUTE App • Sunday Route 1 Downtown Navigation';
+                } else if (stageNum == 2) {
+                    showcaseHeaderTitle.textContent = 'ROUTE App • Sunday Morning 1-Tap Attendance';
+                } else if (stageNum == 3) {
+                    showcaseHeaderTitle.textContent = 'ROUTE App • Saturday Soulwinning & Outreach';
+                }
+            }
+
+            if (busAnimIcon && stageNum == 1) {
+                busAnimIcon.style.left = '52%';
+            } else if (busAnimIcon && stageNum == 2) {
+                busAnimIcon.style.left = '82%';
+            }
+        };
+
+        stepCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const stage = card.getAttribute('data-stage');
+                setStage(stage);
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const rect = scrollShowcaseSection.getBoundingClientRect();
+            const sectionHeight = rect.height;
+            const viewHeight = window.innerHeight;
+
+            if (rect.top <= viewHeight * 0.5 && rect.bottom >= viewHeight * 0.2) {
+                const totalScrollable = sectionHeight - viewHeight;
+                const currentProgress = Math.min(Math.max((viewHeight * 0.5 - rect.top) / sectionHeight, 0), 1);
+
+                if (currentProgress < 0.35) {
+                    setStage(1);
+                } else if (currentProgress < 0.7) {
+                    setStage(2);
+                } else {
+                    setStage(3);
+                }
             }
         });
     }
@@ -117,11 +206,11 @@ document.addEventListener('DOMContentLoaded', () => {
             routeCountDisplay.textContent = routes === 1 ? '1 Route' : `${routes} Routes`;
 
             // Calculate estimated monthly savings
-            const hoursSaved = routes * 12; // ~12 hours saved per route per month
-            const callsAvoided = routes * 65; // ~65 frantic parent phone calls avoided per month
+            const hoursSaved = routes * 14; // ~14 hours saved per route per month
+            const callsAvoided = routes * 18; // ~18 hours saved searching rosters
 
             hoursSavedDisplay.textContent = `${hoursSaved} Hrs / mo`;
-            callsAvoidedDisplay.textContent = `${callsAvoided} Calls`;
+            callsAvoidedDisplay.textContent = `${callsAvoided} Hrs Roster Prep`;
         };
 
         routeSlider.addEventListener('input', updateCalculator);
